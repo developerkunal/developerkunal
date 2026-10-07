@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 44" width="880" height="44">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3f6fa"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="440" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+      <stop offset="0" stop-color="#0969da"/>
+      <stop offset="0.33" stop-color="#8250df"/>
+      <stop offset="0.66" stop-color="#bf3989"/>
+      <stop offset="1" stop-color="#0969da"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="0 0; 440 0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="neonRev" x1="0" y1="0" x2="440" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+      <stop offset="0" stop-color="#bf3989"/>
+      <stop offset="0.33" stop-color="#8250df"/>
+      <stop offset="0.66" stop-color="#0969da"/>
+      <stop offset="1" stop-color="#bf3989"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="0 0; -440 0" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0969da" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#0969da" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#bf3989" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#bf3989" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#e3e8ee" stroke-width="0.6"/>
+      <animateTransform attributeName="patternTransform" type="translate" values="0 0; 16 0" dur="2.5s" repeatCount="indefinite"/>
+    </pattern>
+    <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000000" fill-opacity="0.02"/>
+    </pattern>
+    <filter id="neonGlow" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="c0"><rect x="78" y="8" width="454.4" height="28">
+      <animate attributeName="width" values="454.4;454.4;0;0;454.4" keyTimes="0;0.28;0.28;0.9;1" dur="15s" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <clipPath id="c1"><rect x="78" y="8" width="0" height="28">
+      <animate attributeName="width" values="0;0;454.4;454.4;0;0" keyTimes="0;0.333;0.433;0.613;0.613;1" dur="15s" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <clipPath id="c2"><rect x="78" y="8" width="0" height="28">
+      <animate attributeName="width" values="0;0;423.2;423.2;0;0" keyTimes="0;0.666;0.766;0.866;0.866;1" dur="15s" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <style>
+      .m { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+      .t { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; fill: #1f2328; }
+    </style>
+  </defs>
+  <rect width="880" height="44" fill="url(#bg)"/>
+  <rect width="880" height="44" fill="url(#grid)" opacity="0.7"/>
+  <ellipse cx="0" cy="22" rx="170" ry="40" fill="url(#blobA)">
+    <animate attributeName="cx" values="60;820;60" dur="16s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="880" cy="22" rx="150" ry="40" fill="url(#blobB)">
+    <animate attributeName="cx" values="820;60;820" dur="16s" repeatCount="indefinite"/>
+  </ellipse>
+  <rect width="880" height="44" fill="url(#scan)"/>
+  <rect width="880" height="1.5" fill="url(#neonRev)" filter="url(#neonGlow)" opacity="0.9"/>
+  <rect y="42.5" width="880" height="1.5" fill="url(#neon)" filter="url(#neonGlow)"/>
+  <text x="16" y="27" class="m" font-size="13" font-weight="700" fill="#0969da" filter="url(#neonGlow)">now
+    <animate attributeName="opacity" values="1;0.75;1;0.9;1" dur="3s" repeatCount="indefinite"/>
+  </text>
+  <text x="50" y="27" class="m" font-size="13" fill="#6e7781">&#10095;</text>
+  <text x="78" y="27" class="t" clip-path="url(#c0)">building SDKs and developer tools that feel obvious to use</text>
+  <text x="78" y="27" class="t" clip-path="url(#c1)">shipping AI tooling: MCP servers, agents and CLI workflows</text>
+  <text x="78" y="27" class="t" clip-path="url(#c2)">open to collaborating on open source developer tooling</text>
+  <rect x="533.4" y="15" width="7" height="15" rx="1" fill="#0969da" filter="url(#neonGlow)">
+    <animate attributeName="x" values="533.4;533.4;78;78;533.4;533.4;78;78;502.2;502.2;78;78;533.4" keyTimes="0;0.28;0.28;0.333;0.433;0.613;0.613;0.666;0.766;0.866;0.866;0.9;1" dur="15s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.05s" repeatCount="indefinite"/>
+  </rect>
+</svg>
